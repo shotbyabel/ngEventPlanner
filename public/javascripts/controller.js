@@ -6,20 +6,20 @@ angular.module('eventApp').controller('formCtrl', ['eventFactory', function(even
    
     this.categories = [{
         id: 1,
-        name: 'Music'
+        name: 'Arts'
     }, {
         id: 2,
-        name: 'Cinema'
+        name: 'Tech'
     }, {
         id: 3,
-        name: 'Games'
+        name: 'Family'
     }, {
         id: 4,
-        name: 'Special Category'
+        name: 'Sports'
     }];
     this.selectedOption = {
         id: 1,
-        name: 'Music'
+        name: 'Arts'
     };
     this.specialEvent = 'false';
     this.specialValue = {
@@ -48,15 +48,19 @@ angular.module('eventApp').controller('formCtrl', ['eventFactory', function(even
     }
     this.submitForm = function(form) {
     	
-        form.category = this.selectedOption;
+        form.category = this.selectedOption; //displays the name of the category. ID and the name
 
         eventFactory.createEvent(angular.copy(form), this.event);
 
         alert("Event Added Succesfully");
     }
 }])
-.controller('eventManagerCtrl', ['eventFactory', function(eventFactory) { 
+.controller('eventManagerCtrl', ['eventFactory', '$filter', function(eventFactory, $filter) { 
     
      this.eventList = eventFactory.getAllEvents();
+     this.eventList = $filter('orderBy')(this.eventList, 'category.name', true)
+     // this.eventList = $filter('orderBy')(this.eventList, 'name')
+        //specifc filters works on directives and services.. OLD filterFilter
+     // this.eventList = filterFilter(this.eventList, {name: 'Graffiti Fine Art', category: {name: 'Arts' } } )
   
 }])

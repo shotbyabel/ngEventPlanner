@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Confederations Cup",
+        "location": "Russia",
+        "description": "Football Tournament",
+        "date": "2017-06-10",
+        "category": {
+            "id": "4",
+            "name": "Sports"
+        },
+        "email": "'fifa@mail.com'"
+    },
+    {
+        "name": "Kendrick Lamar",
+        "location": "Paris",
+        "description": "Music Concert",
+        "date": "2015-12-31",
+        "category": {
+            "id": "1",
+            "name": "Arts"
+        },
+        "email": "rap@mail.com"
+    },
+    {
+        "name": "LA County Fair",
+        "description": "Family Festival",
+        "location": "San Bernadio",
+        "date": "2016-02-11",
+        "category": {
+            "id": "3",
+            "name": "Family"
+        },
+        "email": "la@mail.com"
+    },
+    {
+        "name": "Civic LA Lab",
+        "description": "Tech Hackathon",
+        "location": "Los Angeles",
+        "date": "2016-04-02",
+        "category": {
+            "id": "2",
+            "name": "Tech"
+        },
+        "email": "tech@mail.com"
+    },
+    {
+        "name": "Graffiti Fine Arts",
+        "location": "Sao Paulo",
+        "description": "Street Art Festival",
+        "date": "2016-04-29",
+        "category": {
+            "id": "1",
+            "name": "Arts"
+        },
+        "email": "'binho@mail.com'"
+    },
+    {
+        "name": "Beach TechMeet",
+        "location": "Venice",
+        "description": "Tech Hackathon",
+        "date": "2015-12-31",
+        "category": {
+            "id": "2",
+            "name": "Tech"
+        },
+        "email": "meet@mail.com"
+    },
+    {
+        "name": "Food Truck Fun",
+        "description": "Food Festival",
+        "location": "Seattle",
+        "date": "2016-08-11",
+        "category": {
+            "id": "3",
+            "name": "Family"
+        },
+        "email": "foods@mail.com"
+    },
+    {
+        "name": "Ballers",
+        "description": "Basketball Tournament",
+        "location": "Madrid",
+        "date": "2018-03-02",
+        "category": {
+            "id": "4",
+            "name": "Sports"
+        },
+        "email": "balls@mail.com"
+    }
+]

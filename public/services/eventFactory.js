@@ -4,7 +4,6 @@ angular.module('eventApp')
   var eventFactory = {};
   var events = [];
 
-  
 
   eventFactory.getAllEvents = function () {
 

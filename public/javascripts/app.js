@@ -1,5 +1,13 @@
 angular.module('eventApp', ['ngRoute','ngMessages'])
-.config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider) {
+.filter ('customUpperCase', function () {
+
+	return function (item) {
+
+		return item.toUpperCase();
+	}
+
+})
+	.config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider) {
     
 	$routeProvider.when('/add-event', {
 	   	templateUrl:'templates/add-event.html',
