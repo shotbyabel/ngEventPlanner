@@ -16,7 +16,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//server listening
+//server listeningls
 app.listen();
 console.log('Server is listening on port 3000!');
 
