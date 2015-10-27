@@ -1,4 +1,4 @@
-angular.module('eventApp', ['ngRoute','ngMessages'])
+angular.module('eventApp', ['ngRoute','ngMessages']) //ngMockE2E
 .filter ('customUpperCase', function () {
 
 	return function (item) {
@@ -19,7 +19,7 @@ angular.module('eventApp', ['ngRoute','ngMessages'])
 	   	templateUrl:'templates/event-list.html',
 	   	controller: 'eventManagerCtrl',
 	   	controllerAs:'managerCtl',
-	   	resolve: {
+	   	resolve: { //added after $http was set up. to return the results of eventfactory before user is able to access data
 	   							initialData: function(eventFactory) {
 	   								return eventFactory.getAllEvents();
 	   							}

@@ -1,0 +1,90 @@
+[
+    {
+        "name": "World Cup",
+        "location": "Russia",
+        "description": "FIFA World Football Tournament",
+        "date": "2018-06-10",
+        "category": {
+            "id": "4",
+            "name": "Sports"
+        },
+        "email": "'fifa@mail.com'"
+    },
+    {
+        "name": "Andrea Bocelli",
+        "location": "Warsaw",
+        "description": "Music Concert",
+        "date": "2016-10-10",
+        "category": {
+            "id": "1",
+            "name": "Arts"
+        },
+        "email": "andrea@mail.com"
+    },
+    {
+        "name": "Reptile Expo",
+        "description": "Family Festival",
+        "location": "Anaheim",
+        "date": "2016-06-30",
+        "category": {
+            "id": "3",
+            "name": "Family"
+        },
+        "email": "reps@mail.com"
+    },
+    {
+        "name": "ArcGIS Convention",
+        "description": "Tech Expo",
+        "location": "Palm Springs",
+        "date": "2016-04-25",
+        "category": {
+            "id": "2",
+            "name": "Tech"
+        },
+        "email": "esrii@mail.com"
+    },
+    {
+        "name": "Polanco Graffestival",
+        "location": "Valparaiso",
+        "description": "Street Art Festival",
+        "date": "2018-07-22",
+        "category": {
+            "id": "1",
+            "name": "Arts"
+        },
+        "email": "valpo@mail.com"
+    },
+    {
+        "name": "Bitcoin Fair",
+        "location": "Berlin",
+        "description": "Tech Expo",
+        "date": "2016-05-29",
+        "category": {
+            "id": "2",
+            "name": "Tech"
+        },
+        "email": "bitcoin@mail.com"
+    },
+    {
+        "name": "Cirque de Solei",
+        "description": "Performance Show",
+        "location": "Dallas",
+        "date": "2017-03-05",
+        "category": {
+            "id": "3",
+            "name": "Family"
+        },
+        "email": "solei@mail.com"
+    },
+    {
+        "name": "Rose Bowl",
+        "description": "NCAA Football Final",
+        "location": "Pasadena",
+        "date": "2016-01-02",
+        "category": {
+            "id": "4",
+            "name": "Sports"
+        },
+        "email": "ncaaf@mail.com"
+    }
+]

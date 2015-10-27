@@ -21,6 +21,8 @@ angular.module('eventApp').controller('formCtrl', ['eventFactory', function(even
         id: 1,
         name: 'Arts'
     };
+
+    
     this.specialEvent = 'false';
     this.specialValue = {
             id: 1,
@@ -54,19 +56,16 @@ angular.module('eventApp').controller('formCtrl', ['eventFactory', function(even
 
         alert("Event Added Succesfully");
     }
-}])
+}])                                               //injected from app.js resolve function      
 .controller('eventManagerCtrl', ['eventFactory', 'initialData', function(eventFactory, initialData) { 
   // this.eventList = 
-    var self = this;
+    var self = this;// so our data can be visible (dealing with scope)
     console.log('Start;')
 
-    this.eventList = initialData;
-    // eventFactory.getAllEvents().then(function(result) {
-        
-    //     self.eventList = result;
-        
+    this.eventList = initialData;//new refactor from abb.js resolve function
+    // eventFactory.getAllEvents().then(function(result) {        
+    //     self.eventList = result;       
     //     console.log(this.eventList);
-
     // });
 
     console.log('End');
