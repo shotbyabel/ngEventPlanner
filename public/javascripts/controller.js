@@ -55,10 +55,24 @@ angular.module('eventApp').controller('formCtrl', ['eventFactory', function(even
         alert("Event Added Succesfully");
     }
 }])
-.controller('eventManagerCtrl', ['eventFactory', '$filter', function(eventFactory, $filter) { 
-    
-     this.eventList = eventFactory.getAllEvents();
-     this.eventList = $filter('orderBy')(this.eventList, 'category.name', true)
+.controller('eventManagerCtrl', ['eventFactory', 'initialData', function(eventFactory, initialData) { 
+  // this.eventList = 
+    var self = this;
+    console.log('Start;')
+
+    this.eventList = initialData;
+    // eventFactory.getAllEvents().then(function(result) {
+        
+    //     self.eventList = result;
+        
+    //     console.log(this.eventList);
+
+    // });
+
+    console.log('End');
+    console.log(self.eventList); 
+     // this.eventList = eventFactory.getAllEvents();
+     // this.eventList = $filter('orderBy')(this.eventList, 'category.name', true)
      // this.eventList = $filter('orderBy')(this.eventList, 'name')
         //specifc filters works on directives and services.. OLD filterFilter
      // this.eventList = filterFilter(this.eventList, {name: 'Graffiti Fine Art', category: {name: 'Arts' } } )

@@ -18,7 +18,12 @@ angular.module('eventApp', ['ngRoute','ngMessages'])
 	.when('/event-list', {
 	   	templateUrl:'templates/event-list.html',
 	   	controller: 'eventManagerCtrl',
-	   	controllerAs:'managerCtl'
+	   	controllerAs:'managerCtl',
+	   	resolve: {
+	   							initialData: function(eventFactory) {
+	   								return eventFactory.getAllEvents();
+	   							}
+	   	}
 
 	   })
 	   .otherwise({redirectTo:'/'});
