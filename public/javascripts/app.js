@@ -1,4 +1,4 @@
-angular.module('eventApp', ['ngRoute','ngMessages']) //ngMockE2E
+angular.module('eventApp', ['ngRoute','ngMessages', 'ngMockE2E']) //ngMockE2E
 .filter ('customUpperCase', function () {
 
 	return function (item) {

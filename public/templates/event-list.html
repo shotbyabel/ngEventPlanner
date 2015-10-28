@@ -1,36 +1,44 @@
 <div class="col-md-12 col-sm-12 col-lg-12">
-                
-        Search: <input type = "text" ng-model="search.$"> 
-        Search by Event: <input type = "text" ng-model="search.$">
-          Description: <input type = "text" ng-model="search.description">
-            Category: <input type = "text" ng-model="search.category">
-              Location: <input type = "text" ng-model="search.location">
-                Exact Match? <input type="checkbox"  ng-model="strict">               
-              <button ng-click="search = undefined">Clear Filter</button>
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th>Event</th>
-                      <th>Description</th>
-                      <th>Category</th>
-                      <th>Contact Email</th>
-                      <th>Location</th>
-                      <th>Date</th>
-                      <th>Special?</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr ng-repeat="event in managerCtl.eventList | filter: search: strict "> <!-- | orderBy: 'name' -->
-                      <td>{{event.name}}</td>
-                      <td>{{event.description}}</td>
-                      <td>{{event.category.name}}</td> <!--frm controller form.category = this.selectedOption;-->
-                      <td>{{event.email}}</td>
-                      <td>{{event.location | customUpperCase }}</td> <!-- from app.js .filter function --> <!-- | uppercase -->
-                      <td>{{event.date | date: 'yyyy-MM-dd'}}</td>
-                      <td>{{event.specialEvent}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-       
 
+    <div>
+        <span>Search: </span> <input type="text" ng-model="search.$">
+        <span>Search by Event Name:</span>  <input type="text" ng-model="search.name">
+        <span>Search by Event Description:</span>  <input type="text" ng-model="search.description">
+        <span>Search by Event Category:</span>  <input type="text" ng-model="search.category.name">
+        <span>Exact Match?</span> <input type="checkbox" ng-model="strict">
+        <button ng-click="search = undefined"> Clear Filter </button>
     </div>
+  <br>
+  <br>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Event</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Contact Email</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Price</th>
+                <th>Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="event in managerCtl.eventList | filter: search: strict ">
+                <td>{{event.id}}</td>
+                <td>{{event.name}}</td>
+                <td>{{event.description}}</td>
+                <td>{{event.category.name}}</td>
+                <td>{{event.email}}</td>
+                <td>{{event.location}}</td>
+                <td>{{event.date | date: 'yyyy-MM-dd'}}</td>
+                <td>{{event.price |currency:"$"}}</td>
+
+                <td>   <button class="btn btn-primary" ng-click=""> Delete </button> </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
